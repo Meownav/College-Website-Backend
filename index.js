@@ -87,5 +87,7 @@ server.get("/get-all-alumni", (req, res) => {
 server.get("/dummy", (req, res) => res.send("Hello"));
 
 server.listen(PORT, () => {
+  console.log("Port is : ", PORT);
   console.log("Server Started.");
+  
 });
