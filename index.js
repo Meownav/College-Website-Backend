@@ -7,6 +7,8 @@ const FacultyDB = require("./models/Faculty.jsx");
 const StudentDB = require("./models/Student.jsx");
 const AlumniDB = require("./models/Alumni.jsx");
 
+const PORT = process.env.PORT || 5000;
+
 const server = express();
 server.use(cors());
 
@@ -82,6 +84,8 @@ server.get("/get-all-alumni", (req, res) => {
   AlumniDB.find({}).then((docs) => res.json(docs));
 });
 
-server.listen(process.env.PORT, () => {
+server.get("/dummy", (req, res) => res.send("Hello"));
+
+server.listen(PORT, () => {
   console.log("Server Started.");
 });
