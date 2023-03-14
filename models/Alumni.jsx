@@ -1,6 +1,11 @@
 const mongoose = require("mongoose");
 
 const alumniDB = new mongoose.Schema({
+  uniqueId: {
+    type: String,
+    required: true,
+    unique: true,
+  },
   name: {
     type: String,
     required: true,
