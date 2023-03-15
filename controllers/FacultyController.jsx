@@ -9,7 +9,7 @@ const addFaculty = (req, res) => {
   faculty.subject = req.body.facultySubject;
   faculty.email = req.body.facultyEmail;
   faculty.phone = req.body.facultyPhone;
-  faculty.join_date = req.body.facultyJoinDate;
+  faculty.joinDate = req.body.facultyJoinDate;
 
   faculty
     .save()

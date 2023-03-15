@@ -26,7 +26,7 @@ const facultySchema = new mongoose.Schema({
     type: Number,
     required: true,
   },
-  join_date: {
+  joinDate: {
     type: Date,
     required: true,
   },
