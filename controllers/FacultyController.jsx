@@ -13,7 +13,7 @@ const addFaculty = (req, res) => {
 
   faculty
     .save()
-    .then((doc) => console.log(doc))
+    // .then((doc) => console.log(doc))
     .then(() => {
       res.json({ message: "Success" });
     })
