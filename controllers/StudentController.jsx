@@ -12,7 +12,7 @@ const addStudent = (req, res) => {
 
   student
     .save()
-    .then((doc) => console.log(doc))
+    // .then((doc) => console.log(doc))
     .then(() => res.json({ message: "Success" }))
     .catch((err) => {
       res.json({ message: "Failed", reason: "" + err });
