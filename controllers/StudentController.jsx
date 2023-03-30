@@ -2,7 +2,6 @@ const StudentDB = require("../models/Student.jsx");
 
 const addStudent = (req, res) => {
   let student = new StudentDB();
-  
   student.name = req.body.studentName;
   student.rollNumber = req.body.studentRollNum;
   student.course = req.body.studentCourse;
@@ -15,7 +14,9 @@ const addStudent = (req, res) => {
     .save()
     .then((doc) => console.log(doc))
     .then(() => res.json({ message: "Success" }))
-    .catch((err) => res.json({ message: "Failed", reason: "" + err }));
+    .catch((err) => {
+      res.json({ message: "Failed", reason: "" + err });
+    });
 };
 
 const getAllStudents = (req, res) => {

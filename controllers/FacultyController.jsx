@@ -18,8 +18,8 @@ const addFaculty = (req, res) => {
       res.json({ message: "Success" });
     })
     .catch((err) => {
-      console.log(err);
       res.json({ message: "Failed", reason: "" + err });
+      console.log(err);
     });
 };
 
