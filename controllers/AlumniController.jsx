@@ -10,7 +10,6 @@ const addAlumni = (req, res) => {
 
   alumni
     .save()
-    // .then((doc) => console.log(doc))
     .then(() => res.json({ message: "Success" }))
     .catch((err) => {
       res.json({ message: "Failed", reason: "" + err });
