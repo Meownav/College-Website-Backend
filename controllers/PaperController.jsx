@@ -25,10 +25,12 @@ const getPaper = (req, res) => {
     year: req.body.year,
   })
     .then((paper) => {
-      res.json({ message: "Success", data: paper });
+      res.json({ message: "Success", data: paper }); // returns Array.
       console.log(paper);
     })
-    .catch((err) => res.json({ message: "Failed", reason: "" + err }));
+    .catch((err) => {
+      res.json({ message: "Failed", reason: "" + err });
+    });
 };
 
 module.exports = {
