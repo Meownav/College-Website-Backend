@@ -38,6 +38,8 @@ server.post("/get-paper", paperController.getPaper);
 
 //Just because.
 server.get("/dummy", (req, res) => res.send("Hello"));
+//Just because. Again.
+server.get("/", (req, res) => res.send("Hello"));
 
 server.listen(PORT, () => {
   console.log("Port is : ", PORT);
